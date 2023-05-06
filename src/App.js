@@ -1,8 +1,8 @@
-import Quiz from "./components/Quiz";
+import QuizSession from "./components/QuizSession";
 
 function App() {
   return (
-    <Quiz />
+    <QuizSession />
   );
 }
 

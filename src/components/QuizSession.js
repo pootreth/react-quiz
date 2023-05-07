@@ -15,7 +15,7 @@ export default function QuizSession() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://opentdb.com/api.php?amount=5&type=multiple")
+      .get("https://opentdb.com/api.php?amount=10&type=multiple")
       .then((res) => {
         setLoading(false);
         setQuizzes(res.data.results);
@@ -25,7 +25,7 @@ export default function QuizSession() {
       });
   }, [temp, start]);
 
-  const score = correctTotal * 20;
+  const score = correctTotal * 10;
   const handleRetry = () => {
     setTemp({});
   };

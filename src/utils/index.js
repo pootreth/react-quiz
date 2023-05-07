@@ -1,2 +1,5 @@
-export const clean = (text) =>
-  text.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
+export const clean = (text) => {
+  const textElement = document.createElement("textarea");
+  textElement.innerHTML = text;
+  return textElement.value;
+};

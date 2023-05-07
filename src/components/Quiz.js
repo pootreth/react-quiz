@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import { clean } from "../utils";
 
 const Quiz = ({ item, onClick, onCorrect }) => {

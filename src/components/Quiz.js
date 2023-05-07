@@ -1,9 +1,12 @@
+import { memo, useMemo } from "react";
 import { clean } from "../utils";
 
-export default function Quiz({ item, onClick, onCorrect }) {
+const Quiz = ({ item, onClick, onCorrect }) => {
   const answers = [item.correct_answer, ...item.incorrect_answers].sort(
-    (a, b) => 0.5 - Math.random()
+    () => 0.5 - Math.random()
   );
+
+  console.log("Quiz Rerender");
   const handleClick = (answer) => {
     onClick();
     if (answer === item.correct_answer) {
@@ -23,4 +26,6 @@ export default function Quiz({ item, onClick, onCorrect }) {
       ))}
     </>
   );
-}
+};
+
+export default memo(Quiz);
